@@ -16,33 +16,9 @@ public class Solution {
 
         String s = "  hello   world!  ";
 
-        String s2 = s.trim();
-
-        LinkedList<String> linkedList = new LinkedList<>();
-        int start = 0;
-        for (int i = 0; i < s2.length(); i++){
-            if (s2.charAt(i) == ' ' && s2.charAt(i - 1) != ' '){
-                linkedList.add(s2.substring(start,i));
-            }
-            if (i > 0 && s2.charAt(i) != ' ' && s2.charAt(i - 1) == ' '){
-                start = i;
-            }
-            if (i == s2.length() - 1){
-                linkedList.add(s2.substring(start,s2.length()));
-            }
-        }
 
 
-        String res = "";
 
-        for(int i =linkedList.size() - 1; i >=0; i--){
-
-            res += linkedList.get(i);
-            if(i != 0){
-                res += " ";
-            }
-        }
-        System.out.println(res);
     }
 
     public int cargoSorting(int[] paths,int[][] cargo){
